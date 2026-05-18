@@ -23,6 +23,7 @@ For mac/linux:
 ### 4. Create a .env file in the root folder of the project.
 
 API_NINJAS_KEY=your_api_ninjas_key_here
+
 API_NINJAS_URL=https://api.api-ninjas.com/v1/motorcycles
 
 ### 5. Run the Flask application
