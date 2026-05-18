@@ -53,6 +53,9 @@ def get_bike_details(make):
             timeout=15
         )
 
+        if response.status_code != 200:
+            return [], f"API error for {make}: {response.status_code}"
+
         data = response.json()
 
         bikes = []
@@ -83,7 +86,7 @@ def get_bike_details(make):
         return bikes, None   
 
     except requests.exceptions.RequestException as error:
-        return [], f"Request failed to fetch details: Error - {error}"
+        return [], f"Request failed to fetch details: {error}"
     
 def get_all_bikes():
     all_bikes = []
