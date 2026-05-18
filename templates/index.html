@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Roads Moto Co.</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/000000/motorcycle.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Night Roads Moto Co.</h1>
+            <p>A made-up website about motorcycles</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="cards-section">
+            <div class="container cards-container">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=900&auto=format&fit=crop"
+                        alt="Premium Selection">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M18.5 21C20.433 21 22 19.433 22 17.5C22 15.567 20.433 14 18.5 14C16.567 14 15 15.567 15 17.5C15 19.433 16.567 21 18.5 21Z"
+                                        stroke="#F54900" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M5.5 21C7.433 21 9 19.433 9 17.5C9 15.567 7.433 14 5.5 14C3.567 14 2 15.567 2 17.5C2 19.433 3.567 21 5.5 21Z"
+                                        stroke="#F54900" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M15 6C15.5523 6 16 5.55228 16 5C16 4.44772 15.5523 4 15 4C14.4477 4 14 4.44772 14 5C14 5.55228 14.4477 6 15 6Z"
+                                        stroke="#F54900" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M12 17.5V14L9 11L13 8L15 11H17" stroke="#F54900" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <h2>Premium Selection</h2>
+                        </div>
+                        <p>Browse our curated collection of the finest motorcycles from top manufacturers worldwide.
+                            Every bike meets our strict quality standards.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=900&auto=format&fit=crop"
+                        alt="Expert Service">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M14.7 6.29998C14.5168 6.48691 14.4142 6.73823 14.4142 6.99998C14.4142 7.26173 14.5168 7.51305 14.7 7.69998L16.3 9.29998C16.4869 9.48321 16.7383 9.58584 17 9.58584C17.2618 9.58584 17.5131 9.48321 17.7 9.29998L21.47 5.52998C21.9728 6.64117 22.1251 7.87921 21.9065 9.07913C21.6878 10.279 21.1087 11.3838 20.2463 12.2463C19.3839 13.1087 18.2791 13.6878 17.0792 13.9064C15.8792 14.1251 14.6412 13.9728 13.53 13.47L6.62001 20.38C6.22218 20.7778 5.68262 21.0013 5.12001 21.0013C4.5574 21.0013 4.01783 20.7778 3.62001 20.38C3.22218 19.9822 2.99869 19.4426 2.99869 18.88C2.99869 18.3174 3.22218 17.7778 3.62001 17.38L10.53 10.47C10.0272 9.35879 9.87492 8.12075 10.0936 6.92083C10.3122 5.72092 10.8913 4.61614 11.7537 3.7537C12.6162 2.89127 13.721 2.31215 14.9209 2.09352C16.1208 1.8749 17.3588 2.02714 18.47 2.52998L14.71 6.28998L14.7 6.29998Z"
+                                        stroke="#F54900" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <h2>Expert Service</h2>
+                        </div>
+                        <p>Our certified technicians provide comprehensive maintenance and repair services to keep your
+                            motorcycle running at peak performance.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1502744688674-c619d1586c9e?q=80&w=900&auto=format&fit=crop"
+                        alt="Warranty Coverage">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M20 13C20 18 16.5 20.5 12.34 21.95C12.1222 22.0238 11.8855 22.0203 11.67 21.94C7.5 20.5 4 18 4 13V6.00002C4 5.73481 4.10536 5.48045 4.29289 5.29292C4.48043 5.10538 4.73478 5.00002 5 5.00002C7 5.00002 9.5 3.80002 11.24 2.28002C11.4519 2.09902 11.7214 1.99957 12 1.99957C12.2786 1.99957 12.5481 2.09902 12.76 2.28002C14.51 3.81002 17 5.00002 19 5.00002C19.2652 5.00002 19.5196 5.10538 19.7071 5.29292C19.8946 5.48045 20 5.73481 20 6.00002V13Z"
+                                        stroke="#F54900" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <h2>Warranty Coverage</h2>
+                        </div>
+                        <p>Every motorcycle comes with comprehensive warranty coverage and roadside assistance for
+                            complete peace of mind on every ride.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="iventory-section">
+            <div class="inventory-container">
+                <h2 class="section-title">Available Inventory</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Make</th>
+                                <th>Model</th>
+                                <th>Engine</th>
+                                <th>Weight</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if bikes %}
+                                {% for bike in bikes %}
+                                    <tr>
+                                        <td>{{ bike.make }}</td>
+                                        <td>{{ bike.model }}</td>
+                                        <td>{{ bike.engine }}</td>
+                                        <td>{{ bike.weight }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Night Roads Moto Co. All rights reserved.</p>
+    </footer>
+</body>
+</html>
