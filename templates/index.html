@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Night Roads Moto Co.</title>
     <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/000000/motorcycle.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
@@ -20,9 +24,7 @@
             <div class="container cards-container">
                 <div class="card">
                     <img
-                        src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=900&auto=format&fit=crop"
-                        data-fallback="{{ url_for('static', filename='images/premium-bike.jpg') }}"
-                        onerror="this.onerror=null; this.src=this.dataset.fallback;"
+                        src="{{ url_for('static', filename='images/Quality_bikes.jpg') }}"
                         alt="Premium Selection"
                     >
                     <div class="card-body">
@@ -54,9 +56,7 @@
                 </div>
                 <div class="card">
                     <img
-                        src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=900&auto=format&fit=crop"
-                        data-fallback="{{ url_for('static', filename='images/expert-bike.jpg') }}"
-                        onerror="this.onerror=null; this.src=this.dataset.fallback;"
+                        src="{{ url_for('static', filename='images/Expert_service.jpg') }}"
                         alt="Expert Service"
                     >
                     <div class="card-body">
@@ -78,9 +78,7 @@
                 </div>
                 <div class="card">
                     <img
-                        src="https://images.unsplash.com/photo-1502744688674-c619d1586c9e?q=80&w=900&auto=format&fit=crop"
-                        data-fallback="{{ url_for('static', filename='images/warranty-bike.jpg') }}"
-                        onerror="this.onerror=null; this.src=this.dataset.fallback;"
+                        src="{{ url_for('static', filename='images/Warranty_coverage.jpg') }}"
                         alt="Warranty Coverage"
                     >
                     <div class="card-body">
@@ -102,7 +100,7 @@
                 </div>
             </div>
         </section>
-        <section class="iventory-section">
+        <section class="inventory-section">
             <div class="inventory-container">
                 <h2 class="section-title">Available Inventory</h2>
                 {% if errors %}
@@ -140,7 +138,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 Night Roads Moto Co. All rights reserved.</p>
+        <p>&copy; {{ current_year }} Night Roads Moto Co. All rights reserved.</p>
     </footer>
 </body>
 </html>

@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from dotenv import load_dotenv
+from datetime import datetime
 import os
 import re
 import requests
@@ -109,7 +110,8 @@ def home():
     return render_template(
         "index.html",
         bikes = bikes,
-        errors = errors
+        errors = errors,
+        current_year = datetime.now().year
         )
 
 if __name__ == "__main__":
