@@ -45,12 +45,13 @@ body {
 /* Cards Section */
 
 .cards-section {
-    padding: 64px 16px 0 16px;
+    padding: 64px 16px;
     background: #FFFFFF;
 }
 
 .cards-container {
-    max-width: min(100% - 40px, 1080px);
+    width: 100%;
+    max-width: 1080px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -60,7 +61,7 @@ body {
 
 .card {
     width: 100%;
-    max-width: 338px;
+    max-width: none;
     background: white;
     border: 1px solid #e5e7eb;
     border-radius: 10px;
@@ -107,12 +108,13 @@ body {
 
 
 .inventory-section {
-    padding: 32px 0 60px;
+    padding: 0 16px 60px;
     background: #FFFFFF;
 }
 
 .inventory-container {
-    width: min(100% - 40px, 1080px);
+    width: 100%;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
@@ -382,7 +384,7 @@ footer {
     }
 
     .cards-container {
-        max-width: 1000px;
+        max-width: 1080px;
     }
 
     .card {
@@ -390,7 +392,7 @@ footer {
     }
 
     .inventory-container {
-        max-width: 1000px;
+        max-width: 1080px;
     }
 }
 
