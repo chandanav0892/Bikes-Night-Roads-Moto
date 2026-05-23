@@ -45,8 +45,15 @@ body {
 /* Cards Section */
 
 .cards-section {
-    padding: 64px 16px;
+    padding: 64px 0;
     background: #FFFFFF;
+}
+
+.container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 16px; /* horizontal padding lives here only */
 }
 
 .cards-container {
@@ -55,7 +62,7 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 32px;
 }
 
@@ -106,10 +113,9 @@ body {
     color: #4a5565;
 }
 
-
 .inventory-section {
-    padding: 0 16px 60px;
     background: #FFFFFF;
+    padding-bottom: 60px;
 }
 
 .inventory-container {
@@ -185,6 +191,7 @@ footer {
     color: #4A5565;
     font-size: 15px;
 }
+
 /* Small Mobile: 320px to 400px */
 
 @media (min-width: 320px) and (max-width: 400px) {
@@ -195,6 +202,7 @@ footer {
 
     .hero-content h1 {
         font-size: 28px;
+        letter-spacing: 1px;
     }
 
     .hero-content p {
@@ -202,12 +210,22 @@ footer {
     }
 
     .cards-section {
-        padding: 30px 12px;
+        padding: 30px 0;
     }
 
     .cards-container {
         flex-direction: column;
-        gap: 24px;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .card {
+        flex: 0 1 100%;
+        max-width: 360px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
     }
 
     .card img {
@@ -215,23 +233,28 @@ footer {
     }
 
     .card-body {
-        padding: 18px;
+        flex: 1;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-title {
+        flex-shrink: 0;
     }
 
     .card-title h2 {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .card-body p {
         font-size: 13px;
+        line-height: 1.6;
+        margin: 0;
     }
 
     .inventory-section {
-        padding: 24px 12px;
-    }
-
-    .inventory-container {
-        width: 100%;
+        padding: 24px 0;
     }
 
     .section-title {
@@ -255,7 +278,6 @@ footer {
     }
 }
 
-
 /* Mobile: 401px to 600px */
 
 @media (min-width: 401px) and (max-width: 600px) {
@@ -274,16 +296,22 @@ footer {
     }
 
     .cards-section {
-        padding: 35px 16px;
+        padding: 35px 0;
     }
 
     .cards-container {
         flex-direction: column;
-        gap: 24px;
+        align-items: center; 
+        gap: 20px;
     }
 
     .card {
-        max-width: 100%;
+        flex: 0 1 100%; 
+        max-width: 400px; 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
     }
 
     .card img {
@@ -291,7 +319,14 @@ footer {
     }
 
     .card-body {
-        padding: 20px;
+        flex: 1;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-title {
+        flex-shrink: 0;
     }
 
     .card-title h2 {
@@ -300,14 +335,12 @@ footer {
 
     .card-body p {
         font-size: 14px;
+        line-height: 1.6;
+        margin: 0;
     }
 
     .inventory-section {
-        padding: 28px 16px;
-    }
-
-    .inventory-container {
-        max-width: 100%;
+        padding: 28px 0;
     }
 
     .section-title {
@@ -331,43 +364,70 @@ footer {
     }
 }
 
+/* Tablet: 601px to 799px */
 
-/* Tablet: 601px to 900px */
-
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 799px) {
     .hero {
         height: 450px;
     }
 
     .hero-content h1 {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     .hero-content p {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .cards-section {
-        padding: 45px 24px;
+        padding: 45px 0;
     }
 
     .cards-container {
-        max-width: 720px;
+        align-items: stretch;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 28px;
     }
 
     .card {
-        max-width: 330px;
+        flex: 0 1 calc(50% - 14px); 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card img {
+        height: 190px;
+    }
+
+    .card-body {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-title {
+        flex-shrink: 0;
+    }
+
+    .card-title h2 {
+        font-size: 19px;
+    }
+
+    .card-body p {
+        flex: 1;
+        font-size: 13px;
+        line-height: 1.6;
+        margin: 0;
     }
 
     .inventory-section {
-        padding: 32px 30px;
+        padding: 32px 0;
     }
 
-    .inventory-container {
-        width: 100%;
-        max-width: 720px;
+    .section-title {
+        font-size: 26px;
     }
 
     table {
@@ -375,6 +435,78 @@ footer {
     }
 }
 
+/* Tablet Wide: 800px to 900px */
+
+@media (min-width: 800px) and (max-width: 900px) {
+    .hero {
+        height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .cards-section {
+        padding: 50px 0;
+    }
+
+    .container {
+        max-width: 900px;
+    }
+
+    .cards-container {
+        align-items: stretch;
+        gap: 28px;
+    }
+
+    .card {
+        flex: 1 1 calc(33.333% - 22px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card img {
+        height: 195px;
+    }
+
+    .card-body {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-title {
+        flex-shrink: 0;
+    }
+
+    .card-title h2 {
+        font-size: 15px;
+    }
+
+    .card-body p {
+        flex: 1;
+        font-size: 13px;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .inventory-section {
+        padding: 32px 0;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+
+    table {
+        min-width: 700px;
+    }
+}
 
 /* Small Desktop: 901px to 1200px */
 
@@ -384,11 +516,35 @@ footer {
     }
 
     .cards-container {
-        max-width: 1080px;
+        align-items: stretch;
+    }
+
+    .card img {
+        height: 200px;
     }
 
     .card {
-        max-width: 310px;
+        flex: 1 1 calc(33.333% - 22px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-body {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-title {
+        flex-shrink: 0; 
+    }
+
+    .card-body p {
+        flex: 1; 
+        font-size: 13px;
+        line-height: 1.6;
+        margin: 0;
     }
 
     .inventory-container {
@@ -403,7 +559,7 @@ footer {
     .hero {
         height: 600px;
     }
-
+    
     .cards-container {
         max-width: 1080px;
     }
